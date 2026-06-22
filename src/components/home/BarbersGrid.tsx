@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useBarbers } from '../../hooks/useBarbers';
 import { BarberCard } from './BarberCard';
 import { KupesiDivider } from '../layout/KupesiDivider';
+import { SectionHeading } from '../ui/SectionHeading';
 
 export function BarbersGrid() {
   const { t } = useTranslation();
@@ -10,8 +11,11 @@ export function BarbersGrid() {
   return (
     <section id="barbers" className="bg-bg py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 className="text-center text-4xl text-cream">{t('barbers.heading')}</h2>
-        <p className="mx-auto mt-3 max-w-md text-center text-muted">{t('barbers.subheading')}</p>
+        <SectionHeading
+          kicker={t('barbers.kicker')}
+          title={t('barbers.heading')}
+          subtitle={t('barbers.subheading')}
+        />
 
         {loading && <p className="mt-12 text-center text-muted">{t('barbers.loading')}</p>}
         {error && <p className="mt-12 text-center text-coral">{t('barbers.error')}</p>}

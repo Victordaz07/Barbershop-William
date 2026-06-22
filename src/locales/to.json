@@ -7,11 +7,28 @@
     "bookNow": "Fakapapau Ni"
   },
   "hero": {
+    "kicker": "Bay Area · 'Oku Ma'u Tonga",
     "title": "Folau Cuts",
     "subtitle": "Fale tele 'ulu 'i Bay Area, 'oku ma'u Tonga, tele lelei taimi kotoa.",
-    "cta": "Fakapapau Ho'o Taimi"
+    "cta": "Fakapapau Ho'o Taimi",
+    "ctaSecondary": "Vakai ki Sēvesi",
+    "badge1": "Lea 'Ingilisi/Tonga",
+    "badge2": "Hu Mai Pe",
+    "badge3": "Kau Tele 'Ulu Lelei"
+  },
+  "features": {
+    "heading": "Ko e Hā 'oku Lelei ai 'a Folau Cuts",
+    "f1Title": "Sēvesi Lea ua",
+    "f1Desc": "'Oku mau lea fakapilitania mo fakatonga, ke ongo'i 'a e kasitomā kotoa kuo nau 'i 'api.",
+    "f2Title": "Fakapapau Faingofua 'i Onolaine",
+    "f2Desc": "Fili ho'o tele 'ulu, sēvesi, mo taimi 'i ha miniti si'i.",
+    "f3Title": "Hu Mai Pe",
+    "f3Desc": "'Ikai ha fakapapau? 'Ikai ha palopalema — hū mai pea te mau tokoni'i koe.",
+    "f4Title": "Kau Tele 'Ulu Lelei",
+    "f4Desc": "Nima poto, laine mata'ina, taimi kotoa 'oku ke heka ai he sea."
   },
   "services": {
+    "kicker": "'Emau Lisi",
     "heading": "'Emau Ngaahi Sēvesi",
     "subheading": "Fili ha sēvesi 'i ho'o fakapapau taimi.",
     "minutes": "miniti",
@@ -20,6 +37,7 @@
     "error": "Na'e ikai lava 'o 'utu'utu mai. Toe feinga."
   },
   "barbers": {
+    "kicker": "'A e Kulupu",
     "heading": "Mo'o 'Ilo ki he Kau Tele 'Ulu",
     "subheading": "Fakapapau mo ho'o tele 'ulu sai'ia, pe tuku mai kiate kimautolu ke fili.",
     "bookWith": "Fakapapau mo {{name}}",
@@ -45,6 +63,7 @@
     "error": "Na'e ikai lava 'o tuku ho'o fakapapau. Toe feinga."
   },
   "reviews": {
+    "kicker": "Ngaahi Fakamatala",
     "heading": "Ko e Lau 'a 'Emau Kasitomā",
     "leaveReview": "Tuku ha Fakamatala",
     "name": "Hingoa",
@@ -115,7 +134,12 @@
   },
   "footer": {
     "tagline": "Folau Cuts — tele mata'ina, mei Bay Area.",
-    "rights": "Tapuhi 'a e ngaahi totonu kotoa."
+    "rights": "Tapuhi 'a e ngaahi totonu kotoa.",
+    "linksHeading": "Ngaahi Lo'au Vave",
+    "contactHeading": "'A'ahi Mai",
+    "addressPlaceholder": "'E hoko mai 'a e tu'asila",
+    "phonePlaceholder": "'E hoko mai 'a e telefoni",
+    "hoursPlaceholder": "'E hoko mai 'a e ngaahi houa"
   },
   "notFound": {
     "title": "Peesi 'Ikai 'Ilo'i",

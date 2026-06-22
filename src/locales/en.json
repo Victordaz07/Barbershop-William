@@ -7,11 +7,28 @@
     "bookNow": "Book Now"
   },
   "hero": {
+    "kicker": "Bay Area · Tongan-Owned",
     "title": "Folau Cuts",
     "subtitle": "Bay Area barbershop, Tongan-owned, sharp cuts every time.",
-    "cta": "Book Your Cut"
+    "cta": "Book Your Cut",
+    "ctaSecondary": "See Services",
+    "badge1": "Bilingual EN/TO",
+    "badge2": "Walk-ins Welcome",
+    "badge3": "Top-Rated Barbers"
+  },
+  "features": {
+    "heading": "Why Folau Cuts",
+    "f1Title": "Bilingual Service",
+    "f1Desc": "We speak English and Tongan, so every client feels at home.",
+    "f2Title": "Easy Online Booking",
+    "f2Desc": "Pick your barber, service, and time slot in under a minute.",
+    "f3Title": "Walk-ins Welcome",
+    "f3Desc": "No appointment? No problem — swing by and we'll fit you in.",
+    "f4Title": "Top-Rated Barbers",
+    "f4Desc": "Skilled hands, sharp lines, every time you sit in the chair."
   },
   "services": {
+    "kicker": "Our Menu",
     "heading": "Our Services",
     "subheading": "Pick a service when you book your appointment.",
     "minutes": "min",
@@ -20,6 +37,7 @@
     "error": "Couldn't load services. Please try again."
   },
   "barbers": {
+    "kicker": "The Team",
     "heading": "Meet the Barbers",
     "subheading": "Book with the barber you trust, or let us pick for you.",
     "bookWith": "Book with {{name}}",
@@ -45,6 +63,7 @@
     "error": "Couldn't submit your booking. Please try again."
   },
   "reviews": {
+    "kicker": "Testimonials",
     "heading": "What Clients Say",
     "leaveReview": "Leave a Review",
     "name": "Name",
@@ -115,7 +134,12 @@
   },
   "footer": {
     "tagline": "Folau Cuts — sharp cuts, Bay Area roots.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "linksHeading": "Quick Links",
+    "contactHeading": "Visit Us",
+    "addressPlaceholder": "Address coming soon",
+    "phonePlaceholder": "Phone coming soon",
+    "hoursPlaceholder": "Hours coming soon"
   },
   "notFound": {
     "title": "Page Not Found",

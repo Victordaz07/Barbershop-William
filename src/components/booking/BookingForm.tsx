@@ -4,6 +4,7 @@ import { Input } from '../ui/Input';
 import { Select } from '../ui/Select';
 import { Button } from '../ui/Button';
 import { KupesiDivider } from '../layout/KupesiDivider';
+import { SectionHeading } from '../ui/SectionHeading';
 import { BarberSelect } from './BarberSelect';
 import { TimeSlotPicker } from './TimeSlotPicker';
 import { useServices } from '../../hooks/useServices';
@@ -88,14 +89,17 @@ export function BookingForm() {
     <section id="booking" className="relative bg-bg2 py-20">
       <KupesiDivider variant="overlay" />
       <div className="relative mx-auto max-w-3xl px-4 md:px-6">
-        <h2 className="text-center text-4xl text-cream">{t('booking.heading')}</h2>
+        <SectionHeading title={t('booking.heading')} />
 
         {confirmed ? (
           <div className="mt-10 rounded-2xl bg-card p-8 text-center">
             <p className="text-lg text-teal">{t('booking.confirmed')}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-10 grid grid-cols-1 gap-6 rounded-2xl border border-cream/5 bg-card/40 p-6 md:grid-cols-2 md:p-8"
+          >
             <Input
               label={t('booking.name')}
               name="clientName"

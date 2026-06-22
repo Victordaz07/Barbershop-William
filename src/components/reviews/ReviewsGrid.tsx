@@ -3,6 +3,7 @@ import { useReviews } from '../../hooks/useReviews';
 import { ReviewCard } from './ReviewCard';
 import { KupesiDivider } from '../layout/KupesiDivider';
 import { ReviewForm } from './ReviewForm';
+import { SectionHeading } from '../ui/SectionHeading';
 
 export function ReviewsGrid() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export function ReviewsGrid() {
   return (
     <section id="reviews" className="bg-bg2 py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 className="text-center text-4xl text-cream">{t('reviews.heading')}</h2>
+        <SectionHeading kicker={t('reviews.kicker')} title={t('reviews.heading')} />
 
         {loading && <p className="mt-12 text-center text-muted">{t('reviews.loading')}</p>}
         {error && <p className="mt-12 text-center text-coral">{t('reviews.error')}</p>}
