@@ -41,7 +41,8 @@
     "confirmed": "Thanks! Your appointment request has been received.",
     "selectService": "Select a service",
     "selectBarber": "Select a barber",
-    "slotTaken": "Booked"
+    "slotTaken": "Booked",
+    "error": "Couldn't submit your booking. Please try again."
   },
   "reviews": {
     "heading": "What Clients Say",

@@ -41,7 +41,8 @@
     "confirmed": "Mālō! Kuo ma'u ho'o kole fakapapau taimi.",
     "selectService": "Fili ha sēvesi",
     "selectBarber": "Fili ha tele 'ulu",
-    "slotTaken": "Kuo Fakapapau"
+    "slotTaken": "Kuo Fakapapau",
+    "error": "Na'e ikai lava 'o tuku ho'o fakapapau. Toe feinga."
   },
   "reviews": {
     "heading": "Ko e Lau 'a 'Emau Kasitomā",
