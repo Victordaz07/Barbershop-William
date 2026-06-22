@@ -1,6 +1,17 @@
-import { addDoc, collection, onSnapshot, query, serverTimestamp, where, type Unsubscribe } from 'firebase/firestore';
+import {
+  addDoc,
+  collection,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+  updateDoc,
+  where,
+  type Unsubscribe,
+} from 'firebase/firestore';
 import { db } from './firebase';
-import type { Appointment } from '../types/appointment';
+import type { Appointment, AppointmentStatus } from '../types/appointment';
 
 // Placeholder hours until the client confirms real business hours.
 const OPEN_HOUR = 9;
@@ -74,4 +85,21 @@ export async function createAppointment(input: NewAppointmentInput): Promise<voi
     status: 'pending',
     createdAt: serverTimestamp(),
   });
+}
+
+// Admin-only (requires auth, per security rules): every appointment regardless of status.
+// Sorts by time client-side to avoid needing a composite (date, time) index.
+export function subscribeToAllAppointments(onChange: (appointments: Appointment[]) => void): Unsubscribe {
+  const appointmentsQuery = query(collection(db, 'appointments'), orderBy('date', 'desc'));
+  return onSnapshot(appointmentsQuery, (snapshot) => {
+    const appointments = snapshot.docs.map(
+      (docSnapshot) => ({ id: docSnapshot.id, ...docSnapshot.data() }) as Appointment,
+    );
+    appointments.sort((a, b) => (a.date === b.date ? b.time.localeCompare(a.time) : 0));
+    onChange(appointments);
+  });
+}
+
+export async function updateAppointmentStatus(id: string, status: AppointmentStatus): Promise<void> {
+  await updateDoc(doc(db, 'appointments', id), { status });
 }

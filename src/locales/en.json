@@ -78,7 +78,34 @@
       "done": "Done"
     },
     "approve": "Approve",
-    "reject": "Reject"
+    "reject": "Reject",
+    "loginError": "Invalid email or password.",
+    "confirmAction": "Confirm",
+    "cancelAction": "Cancel",
+    "completeAction": "Mark Done",
+    "save": "Save",
+    "cancelEdit": "Cancel",
+    "addNew": "Add New",
+    "edit": "Edit",
+    "delete": "Delete",
+    "noAppointments": "No appointments yet.",
+    "statusLabel": "Status",
+    "pendingReviews": "Pending Reviews",
+    "approvedReviews": "Approved Reviews",
+    "noPendingReviews": "No reviews waiting for moderation.",
+    "noApprovedReviews": "No approved reviews yet.",
+    "fields": {
+      "nameEn": "Name (English)",
+      "nameTo": "Name (Tongan)",
+      "price": "Price ($)",
+      "durationMinutes": "Duration (minutes)",
+      "active": "Active",
+      "name": "Name",
+      "role": "Role",
+      "bioEn": "Bio (English)",
+      "bioTo": "Bio (Tongan)",
+      "photoUrl": "Photo URL"
+    }
   },
   "validation": {
     "required": "This field is required.",

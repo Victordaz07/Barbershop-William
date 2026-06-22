@@ -78,7 +78,34 @@
       "done": "Kuo 'Osi"
     },
     "approve": "Tali",
-    "reject": "Taliteke'i"
+    "reject": "Taliteke'i",
+    "loginError": "Ta'etotonu 'a e 'imeili pe lea fakapulipuli.",
+    "confirmAction": "Fakapapau",
+    "cancelAction": "Fakalongo'i",
+    "completeAction": "Fakaongo 'osi",
+    "save": "Tauhi",
+    "cancelEdit": "Fakalongo'i",
+    "addNew": "'Ai Fo'ou",
+    "edit": "Liliu",
+    "delete": "Tāmate'i",
+    "noAppointments": "Te'eki ha fakapapau.",
+    "statusLabel": "Tu'unga",
+    "pendingReviews": "Fakamatala 'oku Tatali",
+    "approvedReviews": "Fakamatala kuo Tali",
+    "noPendingReviews": "'Ikai ha fakamatala 'oku tatali ki he sivi.",
+    "noApprovedReviews": "Te'eki ha fakamatala kuo tali.",
+    "fields": {
+      "nameEn": "Hingoa (Pilitania)",
+      "nameTo": "Hingoa (Lea Tonga)",
+      "price": "Totongi ($)",
+      "durationMinutes": "Fuoloa (miniti)",
+      "active": "'Oku Ngāue'aki",
+      "name": "Hingoa",
+      "role": "Tu'unga",
+      "bioEn": "Fakamatala (Pilitania)",
+      "bioTo": "Fakamatala (Lea Tonga)",
+      "photoUrl": "Fakatātā URL"
+    }
   },
   "validation": {
     "required": "Fiema'u 'a e konga ni.",
