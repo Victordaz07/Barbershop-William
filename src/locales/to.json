@@ -116,5 +116,10 @@
   "footer": {
     "tagline": "Folau Cuts — tele mata'ina, mei Bay Area.",
     "rights": "Tapuhi 'a e ngaahi totonu kotoa."
+  },
+  "notFound": {
+    "title": "Peesi 'Ikai 'Ilo'i",
+    "subtitle": "'Oku 'ikai ke 'i ai 'a e peesi 'oku ke kumi ki ai.",
+    "backHome": "Foki ki 'Api"
   }
 }
