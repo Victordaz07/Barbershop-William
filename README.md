@@ -14,14 +14,34 @@ admin login.
 
 ## Status
 
-Currently implemented: project scaffold, Dark Tropics design system, i18n
-(EN/TO toggle persisted to `localStorage`), public shell (Navbar/Footer/kupesi
-divider), Hero, Services grid, and Barbers grid (both reading from Firestore).
+Implemented: project scaffold, Dark Tropics design system, i18n (EN/TO toggle
+persisted to `localStorage`), public shell (Navbar/Footer/kupesi divider),
+Hero, Services grid, Barbers grid, full booking flow (form, real-time time
+slots, availability), reviews (public grid + submission form, moderation
+queue), Firestore security rules (deployed), and an admin panel (`/admin`)
+with appointment management, review moderation, and services/barbers CRUD.
 
-Not yet built: booking flow, reviews, admin panel, security rules, deploy
-config. Firestore is currently empty — until `services`/`barbers` documents
-exist, those sections show their "coming soon" empty states (this is expected
-behavior, not a bug).
+Not yet built: production deploy config (Hosting), final polish pass, and an
+admin Auth account (see [Manual setup remaining](#manual-setup-remaining)).
+
+`services`/`barbers` currently have placeholder data seeded directly in the
+Firebase console (Signature Fade, Beard Sculpt, Full Package, Kids Cut /
+Sione Taufa, Mele Vaka, David Kava) so the grids render populated while real
+client info is pending.
+
+## Manual setup remaining
+
+These steps require Firebase Console access and can't be done from this
+environment (no interactive browser/CI token, and the project's existing
+service account key doesn't have the IAM roles needed):
+
+1. **Create the admin account.** Firebase Console → Authentication → Sign-in
+   method → enable **Email/Password** (if not already) → Users → Add user.
+   The security rules treat *any* authenticated user as admin (single-account
+   model, no public signup) — log into `/admin/login` with that email/password
+   once created.
+2. **(Later) Enable Cloud Storage** when the client upgrades off the Spark
+   plan, to support real review photo uploads — see below.
 
 ## Setup
 
@@ -45,12 +65,6 @@ VITE_FIREBASE_APP_ID=
 These come from the Firebase console (Project Settings → General → Your apps).
 `.env` is gitignored — never commit it.
 
-### Seeding sample data
-
-To see the Services/Barbers sections populated, add documents to the
-`services` and `barbers` Firestore collections matching the shapes in
-[Data model](#data-model) below (e.g. via the Firebase console).
-
 ## Scripts
 
 - `npm run dev` — local dev server
@@ -61,9 +75,16 @@ To see the Services/Barbers sections populated, add documents to the
 ## Data model (Firestore)
 
 - **appointments**: `{ id, clientName, phone, serviceId, barberId | 'any', date (YYYY-MM-DD), time (HH:mm), status: 'pending'|'confirmed'|'cancelled'|'done', createdAt }`
-- **reviews**: `{ id, name, rating (1-5), comment, photoUrls: string[], approved: boolean, createdAt }`
+- **reviews**: `{ id, clientName, rating (1-5), comment, photoUrls: string[], approved: boolean, createdAt }`
 - **services**: `{ id, nameEn, nameTo, price, durationMinutes, active: boolean }`
 - **barbers**: `{ id, name, role, bioEn, bioTo, photoUrl, active: boolean }`
+
+## Security model
+
+`firestore.rules` (deployed): public can read `services`/`barbers` and create
+`appointments` (must start `status: 'pending'`) and `reviews` (must start
+`approved: false`). Any authenticated user can read/write everything — there's
+a single admin account, no public signup or per-user roles.
 
 ## Enabling Storage later
 
@@ -71,17 +92,15 @@ The project currently runs on the Firebase **Spark** (free) plan, which does
 not include Cloud Storage. Photo uploads on reviews are built behind a single
 abstraction so enabling Storage later is a one-function change:
 
-- `src/lib/photo-upload.ts` exports `uploadReviewPhotos(files: File[]): Promise<string[]>`.
-- Every caller (the review form, review display) only ever calls this
-  function and renders whatever strings come back — they don't know or care
-  whether those are Storage URLs or something else.
-- **Phase 1 (now):** stubbed/compressed-base64 implementation (see that
-  file's comments for which mode is active).
-- **Phase 2 (once the client upgrades to Blaze):** swap the function body to
-  upload to Firebase Storage and return real download URLs. No other code
-  needs to change.
-
-This file doesn't exist yet — it ships with the reviews feature.
+- `src/lib/uploadReviewPhotos.ts` exports `uploadReviewPhotos(files: File[]): Promise<string[]>`.
+- Every caller (`ReviewForm`, `ReviewCard`) only ever calls this function and
+  renders whatever strings come back — they don't know or care whether those
+  are Storage URLs or something else.
+- **Now:** stub that returns `[]` (no photos), so the photo input is shown as
+  disabled with a "coming soon" message (`PhotoUpload.tsx`).
+- **Once the client upgrades to Blaze:** swap the function body to upload to
+  Firebase Storage and return real download URLs. No other code needs to
+  change.
 
 ## Design system
 
