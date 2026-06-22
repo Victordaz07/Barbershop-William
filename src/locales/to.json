@@ -55,6 +55,9 @@
     "submit": "Tuku 'a e Fakamatala",
     "submitting": "'Oku tuku atu…",
     "pendingModeration": "Mālō! 'E hā ho'o fakamatala hili 'a e sivi.",
+    "loading": "'Oku 'utu'utu mai 'a e ngaahi fakamatala…",
+    "error": "Na'e ikai lava 'o 'utu'utu mai 'a e ngaahi fakamatala. Kataki 'o toe feinga.",
+    "submitError": "Na'e ikai lava 'o tuku 'a ho'o fakamatala. Kataki 'o toe feinga.",
     "empty": "Te'eki ha fakamatala. Ko koe 'a e 'uluaki!"
   },
   "admin": {

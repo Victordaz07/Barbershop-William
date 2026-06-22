@@ -55,6 +55,9 @@
     "submit": "Submit Review",
     "submitting": "Submitting…",
     "pendingModeration": "Thanks! Your review will appear after moderation.",
+    "loading": "Loading reviews…",
+    "error": "Couldn't load reviews. Please try again.",
+    "submitError": "Couldn't submit your review. Please try again.",
     "empty": "No reviews yet. Be the first!"
   },
   "admin": {
