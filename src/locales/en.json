@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "barbers": "Barbers",
+    "reviews": "Reviews",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "title": "Folau Cuts",
+    "subtitle": "Bay Area barbershop, Tongan-owned, sharp cuts every time.",
+    "cta": "Book Your Cut"
+  },
+  "services": {
+    "heading": "Our Services",
+    "subheading": "Pick a service when you book your appointment.",
+    "minutes": "min",
+    "loading": "Loading services…",
+    "empty": "Services coming soon.",
+    "error": "Couldn't load services. Please try again."
+  },
+  "barbers": {
+    "heading": "Meet the Barbers",
+    "subheading": "Book with the barber you trust, or let us pick for you.",
+    "bookWith": "Book with {{name}}",
+    "loading": "Loading barbers…",
+    "empty": "Barber profiles coming soon.",
+    "error": "Couldn't load barbers. Please try again."
+  },
+  "booking": {
+    "heading": "Book an Appointment",
+    "name": "Name",
+    "phone": "Phone",
+    "service": "Service",
+    "barber": "Barber",
+    "anyBarber": "Any available",
+    "date": "Date",
+    "time": "Time",
+    "submit": "Book Appointment",
+    "submitting": "Booking…",
+    "confirmed": "Thanks! Your appointment request has been received.",
+    "selectService": "Select a service",
+    "selectBarber": "Select a barber",
+    "slotTaken": "Booked"
+  },
+  "reviews": {
+    "heading": "What Clients Say",
+    "leaveReview": "Leave a Review",
+    "name": "Name",
+    "rating": "Rating",
+    "comment": "Comment",
+    "addPhotos": "Add Photos",
+    "photosComingSoon": "Photo uploads coming soon",
+    "submit": "Submit Review",
+    "submitting": "Submitting…",
+    "pendingModeration": "Thanks! Your review will appear after moderation.",
+    "empty": "No reviews yet. Be the first!"
+  },
+  "admin": {
+    "login": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "moderation": "Reviews Moderation",
+    "barbersManagement": "Barbers",
+    "servicesManagement": "Services",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "done": "Done"
+    },
+    "approve": "Approve",
+    "reject": "Reject"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "invalidPhone": "Enter a valid phone number.",
+    "pastDate": "Please choose a date in the future.",
+    "selectRating": "Please select a rating."
+  },
+  "footer": {
+    "tagline": "Folau Cuts — sharp cuts, Bay Area roots.",
+    "rights": "All rights reserved."
+  }
+}

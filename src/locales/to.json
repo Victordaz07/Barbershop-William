@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "'Api",
+    "services": "Ngaahi Sēvesi",
+    "barbers": "Kau Tele 'Ulu",
+    "reviews": "Ngaahi Fakamatala",
+    "bookNow": "Fakapapau Ni"
+  },
+  "hero": {
+    "title": "Folau Cuts",
+    "subtitle": "Fale tele 'ulu 'i Bay Area, 'oku ma'u Tonga, tele lelei taimi kotoa.",
+    "cta": "Fakapapau Ho'o Taimi"
+  },
+  "services": {
+    "heading": "'Emau Ngaahi Sēvesi",
+    "subheading": "Fili ha sēvesi 'i ho'o fakapapau taimi.",
+    "minutes": "miniti",
+    "loading": "'Oku 'utu'utu mai…",
+    "empty": "'E hoko mai ha ngaahi sēvesi.",
+    "error": "Na'e ikai lava 'o 'utu'utu mai. Toe feinga."
+  },
+  "barbers": {
+    "heading": "Mo'o 'Ilo ki he Kau Tele 'Ulu",
+    "subheading": "Fakapapau mo ho'o tele 'ulu sai'ia, pe tuku mai kiate kimautolu ke fili.",
+    "bookWith": "Fakapapau mo {{name}}",
+    "loading": "'Oku 'utu'utu mai…",
+    "empty": "'E hoko mai ha ngaahi fakamatala kau tele 'ulu.",
+    "error": "Na'e ikai lava 'o 'utu'utu mai. Toe feinga."
+  },
+  "booking": {
+    "heading": "Fakapapau ho'o Taimi",
+    "name": "Hingoa",
+    "phone": "Telefoni",
+    "service": "Sēvesi",
+    "barber": "Tele 'Ulu",
+    "anyBarber": "Ha taha 'oku 'ataa",
+    "date": "'Aho",
+    "time": "Taimi",
+    "submit": "Fakapapau",
+    "submitting": "'Oku fakapapau…",
+    "confirmed": "Mālō! Kuo ma'u ho'o kole fakapapau taimi.",
+    "selectService": "Fili ha sēvesi",
+    "selectBarber": "Fili ha tele 'ulu",
+    "slotTaken": "Kuo Fakapapau"
+  },
+  "reviews": {
+    "heading": "Ko e Lau 'a 'Emau Kasitomā",
+    "leaveReview": "Tuku ha Fakamatala",
+    "name": "Hingoa",
+    "rating": "Fakamamafa",
+    "comment": "Fakamatala",
+    "addPhotos": "'Ai ha Fakatātā",
+    "photosComingSoon": "'E hoko mai 'a e 'ai fakatātā",
+    "submit": "Tuku 'a e Fakamatala",
+    "submitting": "'Oku tuku atu…",
+    "pendingModeration": "Mālō! 'E hā ho'o fakamatala hili 'a e sivi.",
+    "empty": "Te'eki ha fakamatala. Ko koe 'a e 'uluaki!"
+  },
+  "admin": {
+    "login": "Hū ki Loto Pule",
+    "email": "'Imeili",
+    "password": "Lea Fakapulipuli",
+    "signIn": "Hū ki Loto",
+    "signOut": "Hū ki Tu'a",
+    "dashboard": "Pea",
+    "appointments": "Ngaahi Fakapapau",
+    "moderation": "Sivi Fakamatala",
+    "barbersManagement": "Kau Tele 'Ulu",
+    "servicesManagement": "Ngaahi Sēvesi",
+    "status": {
+      "pending": "'Oku Tatali",
+      "confirmed": "Kuo Fakapapau",
+      "cancelled": "Kuo Fakalongo'i",
+      "done": "Kuo 'Osi"
+    },
+    "approve": "Tali",
+    "reject": "Taliteke'i"
+  },
+  "validation": {
+    "required": "Fiema'u 'a e konga ni.",
+    "invalidPhone": "Fakahū ha telefoni ngofua.",
+    "pastDate": "Fili ha 'aho 'oku te'eki hoko mai.",
+    "selectRating": "Fili ha fakamamafa."
+  },
+  "footer": {
+    "tagline": "Folau Cuts — tele mata'ina, mei Bay Area.",
+    "rights": "Tapuhi 'a e ngaahi totonu kotoa."
+  }
+}
