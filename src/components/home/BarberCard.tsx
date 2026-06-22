@@ -10,7 +10,13 @@ export function BarberCard({ barber }: { barber: Barber }) {
 
   return (
     <div className="overflow-hidden rounded-2xl bg-card">
-      <img src={barber.photoUrl} alt={barber.name} className="h-64 w-full object-cover" />
+      {barber.photoUrl ? (
+        <img src={barber.photoUrl} alt={barber.name} className="h-64 w-full object-cover" />
+      ) : (
+        <div className="flex h-64 w-full items-center justify-center bg-bg2 text-5xl font-display text-sand">
+          {barber.name.charAt(0)}
+        </div>
+      )}
       <div className="p-6">
         <h3 className="text-xl text-cream">{barber.name}</h3>
         <p className="text-sm font-semibold text-teal">{barber.role}</p>
