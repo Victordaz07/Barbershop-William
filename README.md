@@ -21,8 +21,10 @@ slots, availability), reviews (public grid + submission form, moderation
 queue), Firestore security rules (deployed), and an admin panel (`/admin`)
 with appointment management, review moderation, and services/barbers CRUD.
 
-Not yet built: production deploy config (Hosting), final polish pass, and an
-admin Auth account (see [Manual setup remaining](#manual-setup-remaining)).
+Not yet built: an admin Auth account (see [Manual setup
+remaining](#manual-setup-remaining)) and a final content/polish pass once
+real client info (business name, address, hours, services, barbers) is
+available.
 
 `services`/`barbers` currently have placeholder data seeded directly in the
 Firebase console (Signature Fade, Beard Sculpt, Full Package, Kids Cut /
@@ -71,6 +73,19 @@ These come from the Firebase console (Project Settings → General → Your apps
 - `npm run build` — type-check (`tsc -b`) and production build
 - `npm run lint` — ESLint
 - `npm run preview` — preview the production build locally
+
+## Deploying
+
+```bash
+npm run build
+firebase deploy --only hosting,firestore:rules
+```
+
+`firebase.json` is configured for Hosting (serves `dist/`, SPA rewrite to
+`index.html`) and Firestore rules. Requires `firebase login` (or a service
+account with the `Firebase Hosting Admin` and `Firebase Rules Admin` roles)
+against the `barbershop-william` project — not yet run from this
+environment.
 
 ## Data model (Firestore)
 
