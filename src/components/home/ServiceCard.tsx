@@ -7,14 +7,17 @@ import beardSculpt from '../../assets/services/beard-sculpt.jpg';
 import signatureFade from '../../assets/services/signature-fade.jpg';
 import kidsCut from '../../assets/services/kids-cut.jpg';
 import fullPackage from '../../assets/services/full-package.jpg';
+import kidsDesign1 from '../../assets/services/kids-design-1.jpg';
+import kidsDesign2 from '../../assets/services/kids-design-2.jpg';
 
 const SERVICE_ICONS = [ScissorsIcon, RazorIcon, BarberPoleIcon, WalkInIcon];
 
-const SERVICE_IMAGES: Record<string, string> = {
-  'beard sculpt': beardSculpt,
-  'signature fade': signatureFade,
-  'kids cut': kidsCut,
-  'full package': fullPackage,
+const SERVICE_IMAGES: Record<string, string[]> = {
+  'beard sculpt': [beardSculpt],
+  'signature fade': [signatureFade],
+  'kids cut': [kidsCut],
+  'full package': [fullPackage],
+  'kids design': [kidsDesign1, kidsDesign2],
 };
 
 export function ServiceCard({ service, index = 0 }: { service: Service; index?: number }) {
@@ -24,7 +27,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
   const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
   const images = service.imageUrls?.length
     ? service.imageUrls
-    : [SERVICE_IMAGES[service.nameEn.trim().toLowerCase()]].filter(Boolean);
+    : SERVICE_IMAGES[service.nameEn.trim().toLowerCase()] ?? [];
   const hasImage = images.length > 0;
 
   return (
