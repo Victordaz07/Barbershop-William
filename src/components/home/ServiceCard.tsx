@@ -46,7 +46,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-cream/5 bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-teal/30 hover:shadow-xl hover:shadow-teal/10">
       {hasImage && (
-        <div className="relative h-44 w-full overflow-hidden">
+        <div className="relative aspect-square w-full overflow-hidden">
           <ServiceImageCarousel images={images} alt={name} />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
           <span className="absolute right-4 top-4 font-heading text-4xl text-cream/20 drop-shadow-md">
