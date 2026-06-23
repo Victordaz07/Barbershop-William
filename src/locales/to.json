@@ -144,9 +144,10 @@
     "rights": "Tapuhi 'a e ngaahi totonu kotoa.",
     "linksHeading": "Ngaahi Lo'au Vave",
     "contactHeading": "'A'ahi Mai",
-    "addressPlaceholder": "'E hoko mai 'a e tu'asila",
-    "phonePlaceholder": "'E hoko mai 'a e telefoni",
-    "hoursPlaceholder": "'E hoko mai 'a e ngaahi houa"
+    "address": "Halaloto, Tongatapu",
+    "phone": "863-3457",
+    "hoursWeekday": "Mōnite – Tu'apulelulu: 9:00am – 9:00pm",
+    "hoursWeekend": "Falaite – Tokonaki: 9:00am – 11:00pm"
   },
   "notFound": {
     "title": "Peesi 'Ikai 'Ilo'i",

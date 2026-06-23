@@ -51,15 +51,20 @@ export function Footer() {
             <ul className="mt-3 flex flex-col gap-2 text-sm text-muted">
               <li className="flex items-center justify-center gap-2 sm:justify-start">
                 <PinIcon className="h-4 w-4 shrink-0" />
-                {t('footer.addressPlaceholder')}
+                {t('footer.address')}
               </li>
               <li className="flex items-center justify-center gap-2 sm:justify-start">
                 <PhoneIcon className="h-4 w-4 shrink-0" />
-                {t('footer.phonePlaceholder')}
+                <a href="tel:+6768633457" className="hover:text-cream">
+                  {t('footer.phone')}
+                </a>
               </li>
-              <li className="flex items-center justify-center gap-2 sm:justify-start">
-                <ClockIcon className="h-4 w-4 shrink-0" />
-                {t('footer.hoursPlaceholder')}
+              <li className="flex items-start justify-center gap-2 sm:justify-start">
+                <ClockIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                <span className="flex flex-col">
+                  <span>{t('footer.hoursWeekday')}</span>
+                  <span>{t('footer.hoursWeekend')}</span>
+                </span>
               </li>
             </ul>
           </div>

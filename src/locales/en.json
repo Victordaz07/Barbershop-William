@@ -144,9 +144,10 @@
     "rights": "All rights reserved.",
     "linksHeading": "Quick Links",
     "contactHeading": "Visit Us",
-    "addressPlaceholder": "Address coming soon",
-    "phonePlaceholder": "Phone coming soon",
-    "hoursPlaceholder": "Hours coming soon"
+    "address": "Halaloto, Tongatapu",
+    "phone": "863-3457",
+    "hoursWeekday": "Mon – Thurs: 9:00am – 9:00pm",
+    "hoursWeekend": "Fri – Sat: 9:00am – 11:00pm"
   },
   "notFound": {
     "title": "Page Not Found",
