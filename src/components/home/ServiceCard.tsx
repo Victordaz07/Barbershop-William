@@ -11,6 +11,8 @@ import kidsDesign1 from '../../assets/services/kids-design-1.jpg';
 import kidsDesign2 from '../../assets/services/kids-design-2.jpg';
 import kidsNormal1 from '../../assets/services/kids-normal-1.jpg';
 import kidsNormal2 from '../../assets/services/kids-normal-2.jpg';
+import hifi1 from '../../assets/services/hifi-1.jpg';
+import hifi2 from '../../assets/services/hifi-2.jpg';
 
 const SERVICE_ICONS = [ScissorsIcon, RazorIcon, BarberPoleIcon, WalkInIcon];
 
@@ -21,6 +23,7 @@ const SERVICE_IMAGES: Record<string, string[]> = {
   'full package': [fullPackage],
   'kids design': [kidsDesign1, kidsDesign2],
   'kids normal': [kidsNormal1, kidsNormal2],
+  'hifi / fade kava / kemo': [hifi1, hifi2],
 };
 
 export function ServiceCard({ service, index = 0 }: { service: Service; index?: number }) {
