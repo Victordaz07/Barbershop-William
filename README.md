@@ -1,6 +1,6 @@
 # Vehikité — Barbershop Booking Platform
 
-Bilingual (English / Tongan) booking site for a Bay Area barbershop. React 19 +
+Bilingual (English / Tongan) booking site for a Tongatapu barbershop. React 19 +
 Vite + TypeScript + Tailwind CSS, with Firebase (Firestore + Auth) for data and
 admin login.
 
