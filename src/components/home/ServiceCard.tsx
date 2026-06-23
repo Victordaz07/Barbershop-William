@@ -9,6 +9,8 @@ import kidsCut from '../../assets/services/kids-cut.jpg';
 import fullPackage from '../../assets/services/full-package.jpg';
 import kidsDesign1 from '../../assets/services/kids-design-1.jpg';
 import kidsDesign2 from '../../assets/services/kids-design-2.jpg';
+import kidsNormal1 from '../../assets/services/kids-normal-1.jpg';
+import kidsNormal2 from '../../assets/services/kids-normal-2.jpg';
 
 const SERVICE_ICONS = [ScissorsIcon, RazorIcon, BarberPoleIcon, WalkInIcon];
 
@@ -18,6 +20,7 @@ const SERVICE_IMAGES: Record<string, string[]> = {
   'kids cut': [kidsCut],
   'full package': [fullPackage],
   'kids design': [kidsDesign1, kidsDesign2],
+  'kids normal': [kidsNormal1, kidsNormal2],
 };
 
 export function ServiceCard({ service, index = 0 }: { service: Service; index?: number }) {
