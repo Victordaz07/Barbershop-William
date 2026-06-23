@@ -24,6 +24,8 @@ export function ServicesManager() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<NewServiceInput>(EMPTY_FORM);
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   function startEdit(service: Service) {
     setEditingId(service.id);
@@ -47,13 +49,21 @@ export function ServicesManager() {
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    setError(null);
+    setSaving(true);
     const input = { ...form, imageUrls: form.imageUrls?.filter((url) => url.trim() !== '') };
-    if (editingId) {
-      await updateService(editingId, input);
-    } else {
-      await createService(input);
+    try {
+      if (editingId) {
+        await updateService(editingId, input);
+      } else {
+        await createService(input);
+      }
+      resetForm();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setSaving(false);
     }
-    resetForm();
   }
 
   function updateImageUrl(index: number, value: string) {
@@ -192,8 +202,11 @@ export function ServicesManager() {
             {t('admin.fields.active')}
           </label>
         </div>
+        {error && <p className="mt-4 text-sm text-coral">{error}</p>}
         <div className="mt-4 flex gap-2">
-          <Button type="submit">{t('admin.save')}</Button>
+          <Button type="submit" disabled={saving}>
+            {saving ? t('admin.submitting') : t('admin.save')}
+          </Button>
           {editingId && (
             <Button type="button" variant="secondary" onClick={resetForm}>
               {t('admin.cancelEdit')}

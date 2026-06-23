@@ -104,6 +104,7 @@
     "cancelAction": "Cancel",
     "completeAction": "Mark Done",
     "save": "Save",
+    "submitting": "Saving…",
     "cancelEdit": "Cancel",
     "addNew": "Add New",
     "addImage": "Add Another Image",
