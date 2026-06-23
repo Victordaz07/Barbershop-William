@@ -8,8 +8,9 @@
   },
   "hero": {
     "kicker": "Bay Area · Tongan-Owned",
-    "title": "Folau Cuts",
-    "subtitle": "Bay Area barbershop, Tongan-owned, sharp cuts every time.",
+    "headline1": "Sharp Cuts. Clean Vibes.",
+    "headline2": "Confidence Every Time.",
+    "subtitle": "Bay Area barbershop, Tongan-owned, delivering sharp cuts and real hospitality.",
     "cta": "Book Your Cut",
     "ctaSecondary": "See Services",
     "badge1": "Bilingual EN/TO",
@@ -17,7 +18,7 @@
     "badge3": "Top-Rated Barbers"
   },
   "features": {
-    "heading": "Why Folau Cuts",
+    "heading": "Why Vehikité",
     "f1Title": "Bilingual Service",
     "f1Desc": "We speak English and Tongan, so every client feels at home.",
     "f2Title": "Easy Online Booking",
@@ -133,7 +134,7 @@
     "selectRating": "Please select a rating."
   },
   "footer": {
-    "tagline": "Folau Cuts — sharp cuts, Bay Area roots.",
+    "tagline": "Vehikité — sharp cuts, Bay Area roots.",
     "rights": "All rights reserved.",
     "linksHeading": "Quick Links",
     "contactHeading": "Visit Us",

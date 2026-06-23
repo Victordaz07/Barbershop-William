@@ -8,8 +8,9 @@
   },
   "hero": {
     "kicker": "Bay Area · 'Oku Ma'u Tonga",
-    "title": "Folau Cuts",
-    "subtitle": "Fale tele 'ulu 'i Bay Area, 'oku ma'u Tonga, tele lelei taimi kotoa.",
+    "headline1": "Tele Mata'ina. 'Ofa Mā'ie.",
+    "headline2": "Loto Mālohi Taimi Kotoa.",
+    "subtitle": "Fale tele 'ulu 'i Bay Area, 'oku ma'u Tonga, 'oku 'omai 'a e tele mata'ina mo e talitali lelei mo'oni.",
     "cta": "Fakapapau Ho'o Taimi",
     "ctaSecondary": "Vakai ki Sēvesi",
     "badge1": "Lea 'Ingilisi/Tonga",
@@ -17,7 +18,7 @@
     "badge3": "Kau Tele 'Ulu Lelei"
   },
   "features": {
-    "heading": "Ko e Hā 'oku Lelei ai 'a Folau Cuts",
+    "heading": "Ko e Hā 'oku Lelei ai 'a Vehikité",
     "f1Title": "Sēvesi Lea ua",
     "f1Desc": "'Oku mau lea fakapilitania mo fakatonga, ke ongo'i 'a e kasitomā kotoa kuo nau 'i 'api.",
     "f2Title": "Fakapapau Faingofua 'i Onolaine",
@@ -133,7 +134,7 @@
     "selectRating": "Fili ha fakamamafa."
   },
   "footer": {
-    "tagline": "Folau Cuts — tele mata'ina, mei Bay Area.",
+    "tagline": "Vehikité — tele mata'ina, mei Bay Area.",
     "rights": "Tapuhi 'a e ngaahi totonu kotoa.",
     "linksHeading": "Ngaahi Lo'au Vave",
     "contactHeading": "'A'ahi Mai",

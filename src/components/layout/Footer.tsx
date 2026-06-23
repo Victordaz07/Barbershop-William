@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { KupesiDivider } from './KupesiDivider';
-import { BarberPoleIcon, ClockIcon, PhoneIcon, PinIcon } from '../ui/icons';
+import { ClockIcon, PhoneIcon, PinIcon } from '../ui/icons';
+import logoLight from '../../assets/logo-light.png';
 
 const LINKS = [
   { href: '#services', key: 'services' },
@@ -19,11 +20,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 md:px-6">
         <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:text-left">
           <div>
-            <p className="flex items-center justify-center gap-2 font-heading text-lg text-cream sm:justify-start">
-              <BarberPoleIcon className="h-5 w-5 text-coral" />
-              Folau Cuts
-            </p>
-            <p className="mt-2 text-sm text-muted">{t('footer.tagline')}</p>
+            <img
+              src={logoLight}
+              alt="Barbershop Vehikité"
+              className="mx-auto h-10 sm:mx-0"
+            />
+            <p className="mt-3 text-sm text-muted">{t('footer.tagline')}</p>
           </div>
 
           <div>
@@ -63,7 +65,7 @@ export function Footer() {
         </div>
 
         <p className="mt-10 text-center text-xs text-muted">
-          &copy; {year} Folau Cuts. {t('footer.rights')}
+          &copy; {year} Vehikité. {t('footer.rights')}
         </p>
       </div>
     </footer>

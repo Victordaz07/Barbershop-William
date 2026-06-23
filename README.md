@@ -1,12 +1,13 @@
-# Folau Cuts — Barbershop Booking Platform
+# Vehikité — Barbershop Booking Platform
 
 Bilingual (English / Tongan) booking site for a Bay Area barbershop. React 19 +
 Vite + TypeScript + Tailwind CSS, with Firebase (Firestore + Auth) for data and
 admin login.
 
-> **Branding note:** "Folau Cuts" is a placeholder name used throughout copy,
-> i18n strings, and the logo until the client confirms the final business
-> name. All copy is structured so a rename is a find-and-replace.
+> **Branding:** "Vehikité" is the confirmed business name. Logo assets live in
+> `src/assets/logo.png` (black, for light backgrounds) and
+> `src/assets/logo-light.png` (cream, for dark backgrounds — navbar, footer,
+> hero).
 
 > **Tongan translation note:** the strings in `src/locales/to.json` are a
 > best-effort draft, not reviewed by a native speaker. Have a fluent Tongan

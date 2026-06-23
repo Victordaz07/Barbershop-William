@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/Button';
 import { LanguageToggle } from './LanguageToggle';
-import { BarberPoleIcon } from '../ui/icons';
+import logoLight from '../../assets/logo-light.png';
 
 const NAV_LINKS = [
   { href: '#services', key: 'services' },
@@ -17,9 +17,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-muted/10 bg-bg/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
-        <a href="#top" className="flex items-center gap-2 font-heading text-xl text-cream">
-          <BarberPoleIcon className="h-6 w-6 text-coral" />
-          Folau Cuts
+        <a href="#top" className="flex items-center">
+          <img src={logoLight} alt="Barbershop Vehikité" className="h-9" />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
