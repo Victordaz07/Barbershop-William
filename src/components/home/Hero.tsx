@@ -25,7 +25,6 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-r from-bg via-bg/85 to-bg/20 md:to-bg/5"
       />
-      <KupesiDivider variant="overlay" />
 
       <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-32">
         <div className="flex max-w-2xl flex-col items-center text-center md:items-start md:text-left">
