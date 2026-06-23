@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/new-session-bxez3q
+  workflow_dispatch: {}
 
 jobs:
   deploy:
