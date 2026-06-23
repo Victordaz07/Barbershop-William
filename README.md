@@ -76,16 +76,27 @@ These come from the Firebase console (Project Settings → General → Your apps
 
 ## Deploying
 
+Deploys to Firebase Hosting (`barbershop-william.web.app`) happen
+automatically via GitHub Actions (`.github/workflows/firebase-deploy.yml`)
+on every push to `claude/new-session-bxez3q`. The workflow builds the app
+and runs `firebase deploy --only hosting,firestore:rules` using a service
+account key stored in the repo secret `FIREBASE_SERVICE_ACCOUNT`.
+
+To set up or rotate that secret: GitHub repo → Settings → Secrets and
+variables → Actions → New repository secret → name `FIREBASE_SERVICE_ACCOUNT`,
+value = the full contents of a service account JSON key (Editor role, or at
+least `Firebase Hosting Admin` + `Firebase Rules Admin`) for the
+`barbershop-william` GCP project.
+
+Manual/local deploy is still possible:
+
 ```bash
 npm run build
-firebase deploy --only hosting,firestore:rules
+firebase deploy --only hosting,firestore:rules --project barbershop-william
 ```
 
-`firebase.json` is configured for Hosting (serves `dist/`, SPA rewrite to
-`index.html`) and Firestore rules. Requires `firebase login` (or a service
-account with the `Firebase Hosting Admin` and `Firebase Rules Admin` roles)
-against the `barbershop-william` project — not yet run from this
-environment.
+Requires `firebase login` or `GOOGLE_APPLICATION_CREDENTIALS` pointing at a
+service account key with the roles above.
 
 ## Data model (Firestore)
 
