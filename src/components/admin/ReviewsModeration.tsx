@@ -1,18 +1,30 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAdminReviews } from '../../hooks/useAdminReviews';
 import { approveReview, deleteReview } from '../../lib/reviews';
 import { Button } from '../ui/Button';
+import { ConfirmDialog } from '../ui/ConfirmDialog';
 import { StarRating } from '../reviews/StarRating';
 
 export function ReviewsModeration() {
   const { t } = useTranslation();
   const { reviews } = useAdminReviews();
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
   const pending = reviews.filter((review) => !review.approved);
   const approved = reviews.filter((review) => review.approved);
 
   return (
     <div className="flex flex-col gap-10">
+      <ConfirmDialog
+        open={pendingDeleteId !== null}
+        message={t('admin.confirmDeleteReview')}
+        onCancel={() => setPendingDeleteId(null)}
+        onConfirm={() => {
+          if (pendingDeleteId) deleteReview(pendingDeleteId);
+          setPendingDeleteId(null);
+        }}
+      />
       <div>
         <h3 className="text-lg text-cream">{t('admin.pendingReviews')}</h3>
         {pending.length === 0 ? (
@@ -31,7 +43,7 @@ export function ReviewsModeration() {
                   <Button
                     variant="secondary"
                     className="px-3 py-1 text-xs"
-                    onClick={() => deleteReview(review.id)}
+                    onClick={() => setPendingDeleteId(review.id)}
                   >
                     {t('admin.reject')}
                   </Button>
@@ -56,7 +68,7 @@ export function ReviewsModeration() {
                 <Button
                   variant="secondary"
                   className="mt-4 px-3 py-1 text-xs"
-                  onClick={() => deleteReview(review.id)}
+                  onClick={() => setPendingDeleteId(review.id)}
                 >
                   {t('admin.delete')}
                 </Button>

@@ -114,6 +114,10 @@
     "approvedReviews": "Fakamatala kuo Tali",
     "noPendingReviews": "'Ikai ha fakamatala 'oku tatali ki he sivi.",
     "noApprovedReviews": "Te'eki ha fakamatala kuo tali.",
+    "confirmDeleteTitle": "Tāmate'i 'a e me'a ni?",
+    "confirmDeleteReview": "'E tāmate'i ta'engata 'a e fakamatala ni.",
+    "confirmDeleteService": "'E tāmate'i ta'engata 'a e sēvesi ni.",
+    "confirmDeleteBarber": "'E tāmate'i ta'engata 'a e tele 'ulu ni.",
     "fields": {
       "nameEn": "Hingoa (Pilitania)",
       "nameTo": "Hingoa (Lea Tonga)",

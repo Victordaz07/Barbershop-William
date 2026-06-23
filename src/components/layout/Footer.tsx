@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { KupesiDivider } from './KupesiDivider';
 import { ClockIcon, PhoneIcon, PinIcon } from '../ui/icons';
@@ -65,7 +66,10 @@ export function Footer() {
         </div>
 
         <p className="mt-10 text-center text-xs text-muted">
-          &copy; {year} Vehikité. {t('footer.rights')}
+          &copy; {year} Vehikité. {t('footer.rights')}{' '}
+          <Link to="/admin/login" className="text-muted/50 hover:text-muted">
+            {t('admin.login')}
+          </Link>
         </p>
       </div>
     </footer>

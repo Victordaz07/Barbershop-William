@@ -5,6 +5,7 @@ import { createBarber, deleteBarber, updateBarber, type NewBarberInput } from '.
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
 import { Button } from '../ui/Button';
+import { ConfirmDialog } from '../ui/ConfirmDialog';
 import type { Barber } from '../../types/barber';
 
 const EMPTY_FORM: NewBarberInput = { name: '', role: '', bioEn: '', bioTo: '', photoUrl: '', active: true };
@@ -14,6 +15,7 @@ export function BarbersManager() {
   const { barbers } = useAdminBarbers();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<NewBarberInput>(EMPTY_FORM);
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
   function startEdit(barber: Barber) {
     setEditingId(barber.id);
@@ -44,6 +46,15 @@ export function BarbersManager() {
 
   return (
     <div className="flex flex-col gap-8">
+      <ConfirmDialog
+        open={pendingDeleteId !== null}
+        message={t('admin.confirmDeleteBarber')}
+        onCancel={() => setPendingDeleteId(null)}
+        onConfirm={() => {
+          if (pendingDeleteId) deleteBarber(pendingDeleteId);
+          setPendingDeleteId(null);
+        }}
+      />
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
           <thead>
@@ -67,7 +78,7 @@ export function BarbersManager() {
                   <Button
                     variant="secondary"
                     className="px-3 py-1 text-xs"
-                    onClick={() => deleteBarber(barber.id)}
+                    onClick={() => setPendingDeleteId(barber.id)}
                   >
                     {t('admin.delete')}
                   </Button>

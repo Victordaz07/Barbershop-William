@@ -114,6 +114,10 @@
     "approvedReviews": "Approved Reviews",
     "noPendingReviews": "No reviews waiting for moderation.",
     "noApprovedReviews": "No approved reviews yet.",
+    "confirmDeleteTitle": "Delete this item?",
+    "confirmDeleteReview": "This review will be permanently deleted.",
+    "confirmDeleteService": "This service will be permanently deleted.",
+    "confirmDeleteBarber": "This barber will be permanently deleted.",
     "fields": {
       "nameEn": "Name (English)",
       "nameTo": "Name (Tongan)",

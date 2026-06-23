@@ -4,6 +4,7 @@ import { useAdminServices } from '../../hooks/useAdminServices';
 import { createService, deleteService, updateService, type NewServiceInput } from '../../lib/services';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
+import { ConfirmDialog } from '../ui/ConfirmDialog';
 import type { Service } from '../../types/service';
 
 const EMPTY_FORM: NewServiceInput = { nameEn: '', nameTo: '', price: 0, durationMinutes: 0, active: true };
@@ -13,6 +14,7 @@ export function ServicesManager() {
   const { services } = useAdminServices();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<NewServiceInput>(EMPTY_FORM);
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
   function startEdit(service: Service) {
     setEditingId(service.id);
@@ -42,6 +44,15 @@ export function ServicesManager() {
 
   return (
     <div className="flex flex-col gap-8">
+      <ConfirmDialog
+        open={pendingDeleteId !== null}
+        message={t('admin.confirmDeleteService')}
+        onCancel={() => setPendingDeleteId(null)}
+        onConfirm={() => {
+          if (pendingDeleteId) deleteService(pendingDeleteId);
+          setPendingDeleteId(null);
+        }}
+      />
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
           <thead>
@@ -67,7 +78,7 @@ export function ServicesManager() {
                   <Button
                     variant="secondary"
                     className="px-3 py-1 text-xs"
-                    onClick={() => deleteService(service.id)}
+                    onClick={() => setPendingDeleteId(service.id)}
                   >
                     {t('admin.delete')}
                   </Button>
