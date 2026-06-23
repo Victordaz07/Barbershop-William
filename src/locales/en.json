@@ -128,7 +128,8 @@
       "role": "Role",
       "bioEn": "Bio (English)",
       "bioTo": "Bio (Tongan)",
-      "photoUrl": "Photo URL"
+      "photoUrl": "Photo URL",
+      "imageUrl": "Image URL"
     }
   },
   "validation": {

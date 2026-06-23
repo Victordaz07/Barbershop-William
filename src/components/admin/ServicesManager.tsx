@@ -7,7 +7,14 @@ import { Button } from '../ui/Button';
 import { ConfirmDialog } from '../ui/ConfirmDialog';
 import type { Service } from '../../types/service';
 
-const EMPTY_FORM: NewServiceInput = { nameEn: '', nameTo: '', price: 0, durationMinutes: 0, active: true };
+const EMPTY_FORM: NewServiceInput = {
+  nameEn: '',
+  nameTo: '',
+  price: 0,
+  durationMinutes: 0,
+  active: true,
+  imageUrl: '',
+};
 
 export function ServicesManager() {
   const { t } = useTranslation();
@@ -24,6 +31,7 @@ export function ServicesManager() {
       price: service.price,
       durationMinutes: service.durationMinutes,
       active: service.active,
+      imageUrl: service.imageUrl ?? '',
     });
   }
 
@@ -57,6 +65,7 @@ export function ServicesManager() {
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b border-muted/20 text-muted">
+              <th className="py-2 pr-4" />
               <th className="py-2 pr-4">{t('admin.fields.nameEn')}</th>
               <th className="py-2 pr-4">{t('admin.fields.price')}</th>
               <th className="py-2 pr-4">{t('admin.fields.durationMinutes')}</th>
@@ -67,6 +76,13 @@ export function ServicesManager() {
           <tbody>
             {services.map((service) => (
               <tr key={service.id} className="border-b border-muted/10 text-cream">
+                <td className="py-2 pr-4">
+                  {service.imageUrl ? (
+                    <img src={service.imageUrl} alt="" className="h-10 w-10 rounded-lg object-cover" />
+                  ) : (
+                    <div className="h-10 w-10 rounded-lg bg-bg2" />
+                  )}
+                </td>
                 <td className="py-2 pr-4">{service.nameEn}</td>
                 <td className="py-2 pr-4">${service.price}</td>
                 <td className="py-2 pr-4">{service.durationMinutes}</td>
@@ -120,6 +136,20 @@ export function ServicesManager() {
             onChange={(e) => setForm({ ...form, durationMinutes: Number(e.target.value) })}
             required
           />
+          <div className="sm:col-span-2">
+            <Input
+              label={t('admin.fields.imageUrl')}
+              value={form.imageUrl}
+              onChange={(e) => setForm({ ...form, imageUrl: e.target.value })}
+            />
+            {form.imageUrl && (
+              <img
+                src={form.imageUrl}
+                alt=""
+                className="mt-2 h-20 w-20 rounded-lg object-cover"
+              />
+            )}
+          </div>
           <label className="flex items-center gap-2 text-sm text-cream">
             <input
               type="checkbox"

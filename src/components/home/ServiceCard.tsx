@@ -21,7 +21,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
   const { language } = useLanguage();
   const name = language === 'to' ? service.nameTo : service.nameEn;
   const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
-  const image = SERVICE_IMAGES[service.nameEn.trim().toLowerCase()];
+  const image = service.imageUrl || SERVICE_IMAGES[service.nameEn.trim().toLowerCase()];
 
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-cream/5 bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-teal/30 hover:shadow-xl hover:shadow-teal/10">
