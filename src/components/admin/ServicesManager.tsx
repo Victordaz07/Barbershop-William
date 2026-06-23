@@ -7,13 +7,15 @@ import { Button } from '../ui/Button';
 import { ConfirmDialog } from '../ui/ConfirmDialog';
 import type { Service } from '../../types/service';
 
+const MIN_IMAGE_FIELDS = 2;
+
 const EMPTY_FORM: NewServiceInput = {
   nameEn: '',
   nameTo: '',
   price: 0,
   durationMinutes: 0,
   active: true,
-  imageUrl: '',
+  imageUrls: ['', ''],
 };
 
 export function ServicesManager() {
@@ -31,7 +33,10 @@ export function ServicesManager() {
       price: service.price,
       durationMinutes: service.durationMinutes,
       active: service.active,
-      imageUrl: service.imageUrl ?? '',
+      imageUrls:
+        service.imageUrls && service.imageUrls.length >= MIN_IMAGE_FIELDS
+          ? service.imageUrls
+          : [...(service.imageUrls ?? []), '', ''].slice(0, MIN_IMAGE_FIELDS),
     });
   }
 
@@ -42,12 +47,27 @@ export function ServicesManager() {
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    const input = { ...form, imageUrls: form.imageUrls?.filter((url) => url.trim() !== '') };
     if (editingId) {
-      await updateService(editingId, form);
+      await updateService(editingId, input);
     } else {
-      await createService(form);
+      await createService(input);
     }
     resetForm();
+  }
+
+  function updateImageUrl(index: number, value: string) {
+    const next = [...(form.imageUrls ?? [])];
+    next[index] = value;
+    setForm({ ...form, imageUrls: next });
+  }
+
+  function removeImageUrl(index: number) {
+    setForm({ ...form, imageUrls: (form.imageUrls ?? []).filter((_, i) => i !== index) });
+  }
+
+  function addImageUrl() {
+    setForm({ ...form, imageUrls: [...(form.imageUrls ?? []), ''] });
   }
 
   return (
@@ -77,8 +97,8 @@ export function ServicesManager() {
             {services.map((service) => (
               <tr key={service.id} className="border-b border-muted/10 text-cream">
                 <td className="py-2 pr-4">
-                  {service.imageUrl ? (
-                    <img src={service.imageUrl} alt="" className="h-10 w-10 rounded-lg object-cover" />
+                  {service.imageUrls?.[0] ? (
+                    <img src={service.imageUrls[0]} alt="" className="h-10 w-10 rounded-lg object-cover" />
                   ) : (
                     <div className="h-10 w-10 rounded-lg bg-bg2" />
                   )}
@@ -136,19 +156,32 @@ export function ServicesManager() {
             onChange={(e) => setForm({ ...form, durationMinutes: Number(e.target.value) })}
             required
           />
-          <div className="sm:col-span-2">
-            <Input
-              label={t('admin.fields.imageUrl')}
-              value={form.imageUrl}
-              onChange={(e) => setForm({ ...form, imageUrl: e.target.value })}
-            />
-            {form.imageUrl && (
-              <img
-                src={form.imageUrl}
-                alt=""
-                className="mt-2 h-20 w-20 rounded-lg object-cover"
-              />
-            )}
+          <div className="sm:col-span-2 flex flex-col gap-4">
+            {(form.imageUrls ?? []).map((url, index) => (
+              <div key={index} className="flex items-end gap-2">
+                <div className="flex-1">
+                  <Input
+                    label={`${t('admin.fields.imageUrl')} ${index + 1}`}
+                    value={url}
+                    onChange={(e) => updateImageUrl(index, e.target.value)}
+                  />
+                </div>
+                {url && <img src={url} alt="" className="h-11 w-11 rounded-lg object-cover" />}
+                {(form.imageUrls?.length ?? 0) > MIN_IMAGE_FIELDS && (
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    className="px-3 py-2.5 text-xs"
+                    onClick={() => removeImageUrl(index)}
+                  >
+                    {t('admin.delete')}
+                  </Button>
+                )}
+              </div>
+            ))}
+            <Button type="button" variant="secondary" className="self-start px-3 py-1.5 text-xs" onClick={addImageUrl}>
+              {t('admin.addImage')}
+            </Button>
           </div>
           <label className="flex items-center gap-2 text-sm text-cream">
             <input

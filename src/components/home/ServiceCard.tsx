@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../context/LanguageContext';
 import { BarberPoleIcon, ClockIcon, RazorIcon, ScissorsIcon, WalkInIcon } from '../ui/icons';
 import type { Service } from '../../types/service';
+import { ServiceImageCarousel } from './ServiceImageCarousel';
 import beardSculpt from '../../assets/services/beard-sculpt.jpg';
 import signatureFade from '../../assets/services/signature-fade.jpg';
 import kidsCut from '../../assets/services/kids-cut.jpg';
@@ -21,17 +22,16 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
   const { language } = useLanguage();
   const name = language === 'to' ? service.nameTo : service.nameEn;
   const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
-  const image = service.imageUrl || SERVICE_IMAGES[service.nameEn.trim().toLowerCase()];
+  const images = service.imageUrls?.length
+    ? service.imageUrls
+    : [SERVICE_IMAGES[service.nameEn.trim().toLowerCase()]].filter(Boolean);
+  const hasImage = images.length > 0;
 
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-cream/5 bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-teal/30 hover:shadow-xl hover:shadow-teal/10">
-      {image && (
+      {hasImage && (
         <div className="relative h-44 w-full overflow-hidden">
-          <img
-            src={image}
-            alt={name}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+          <ServiceImageCarousel images={images} alt={name} />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
           <span className="absolute right-4 top-4 font-heading text-4xl text-cream/20 drop-shadow-md">
             {String(index + 1).padStart(2, '0')}
@@ -40,7 +40,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
       )}
 
       <div className="relative p-6">
-        {!image && (
+        {!hasImage && (
           <span className="absolute right-5 top-5 font-heading text-4xl text-cream/5 transition-colors duration-300 group-hover:text-teal/10">
             {String(index + 1).padStart(2, '0')}
           </span>
@@ -48,7 +48,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
 
         <div
           className={`relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-teal/20 to-coral/20 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${
-            image ? '-mt-12 border-4 border-card' : ''
+            hasImage ? '-mt-12 border-4 border-card' : ''
           }`}
         >
           <Icon className="h-7 w-7 text-coral" />

@@ -5,5 +5,5 @@ export interface Service {
   price: number;
   durationMinutes: number;
   active: boolean;
-  imageUrl?: string;
+  imageUrls?: string[];
 }
