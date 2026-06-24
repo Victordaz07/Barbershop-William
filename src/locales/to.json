@@ -3,25 +3,25 @@
     "home": "'Api",
     "services": "Ngaahi Sēvesi",
     "barbers": "Kau Tele 'Ulu",
-    "reviews": "Ngaahi Fakamatala",
+    "reviews": "Ngaahi Lau",
     "bookNow": "Fakapapau Ni"
   },
   "hero": {
-    "kicker": "Tongatapu · 'Oku Ma'u Fāmili",
-    "headline1": "Tele Mata'ina. 'Ofa Mā'ie.",
-    "headline2": "Loto Mālohi Taimi Kotoa.",
-    "subtitle": "Fale tele 'ulu 'i Tongatapu, 'oku ma'u fāmili, 'oku 'omai 'a e tele mata'ina mo e talitali lelei mo'oni.",
+    "kicker": "Tongatapu · Ngāue Fakafāmili",
+    "headline1": "Tele Mata'ina. Mālie 'Aupito.",
+    "headline2": "Loto Mālohi Ma'u Pe.",
+    "subtitle": "Fale tele 'ulu fakafāmili 'i Tongatapu, 'oku 'omai 'a e tele mata'ina mo e talitali lelei mo'oni.",
     "cta": "Fakapapau Ho'o Taimi",
     "ctaSecondary": "Vakai ki Sēvesi",
-    "badge1": "Lea 'Ingilisi/Tonga",
+    "badge1": "Lea Pilitania mo Tonga",
     "badge2": "Hu Mai Pe",
     "badge3": "Kau Tele 'Ulu Lelei"
   },
   "features": {
-    "heading": "Ko e Hā 'oku Lelei ai 'a Vehikité",
+    "heading": "Ko e Lelei 'o Vehikité",
     "f1Title": "Sēvesi Lea ua",
     "f1Desc": "'Oku mau lea fakapilitania mo fakatonga, ke ongo'i 'a e kasitomā kotoa kuo nau 'i 'api.",
-    "f2Title": "Fakapapau Faingofua 'i Onolaine",
+    "f2Title": "Fakapapau Faingofua Online",
     "f2Desc": "Fili ho'o tele 'ulu, sēvesi, mo taimi 'i ha miniti si'i.",
     "f3Title": "Hu Mai Pe",
     "f3Desc": "'Ikai ha fakapapau? 'Ikai ha palopalema — hū mai pea te mau tokoni'i koe.",
@@ -35,16 +35,16 @@
     "minutes": "miniti",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi sēvesi.",
-    "error": "Na'e ikai lava 'o 'utu'utu mai. Toe feinga."
+    "error": "Na'e ikai lava 'o 'utu'utu mai. Kataki 'o toe feinga."
   },
   "barbers": {
     "kicker": "'A e Kulupu",
-    "heading": "Mo'o 'Ilo ki he Kau Tele 'Ulu",
+    "heading": "'Ilo'i 'Emau Kau Tele 'Ulu",
     "subheading": "Fakapapau mo ho'o tele 'ulu sai'ia, pe tuku mai kiate kimautolu ke fili.",
     "bookWith": "Fakapapau mo {{name}}",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi fakamatala kau tele 'ulu.",
-    "error": "Na'e ikai lava 'o 'utu'utu mai. Toe feinga."
+    "error": "Na'e ikai lava 'o 'utu'utu mai. Kataki 'o toe feinga."
   },
   "booking": {
     "heading": "Fakapapau ho'o Taimi",
@@ -61,24 +61,24 @@
     "selectService": "Fili ha sēvesi",
     "selectBarber": "Fili ha tele 'ulu",
     "slotTaken": "Kuo Fakapapau",
-    "error": "Na'e ikai lava 'o tuku ho'o fakapapau. Toe feinga."
+    "error": "Na'e ikai lava 'o tuku ho'o fakapapau. Kataki 'o toe feinga."
   },
   "reviews": {
-    "kicker": "Ngaahi Fakamatala",
+    "kicker": "Lea 'a Kasitomā",
     "heading": "Ko e Lau 'a 'Emau Kasitomā",
-    "leaveReview": "Tuku ha Fakamatala",
+    "leaveReview": "Tuku Ho'o Lau",
     "name": "Hingoa",
-    "rating": "Fakamamafa",
+    "rating": "Rating",
     "comment": "Fakamatala",
     "addPhotos": "'Ai ha Fakatātā",
     "photosComingSoon": "'E hoko mai 'a e 'ai fakatātā",
-    "submit": "Tuku 'a e Fakamatala",
+    "submit": "Tuku Ho'o Lau",
     "submitting": "'Oku tuku atu…",
-    "pendingModeration": "Mālō! 'E hā ho'o fakamatala hili 'a e sivi.",
-    "loading": "'Oku 'utu'utu mai 'a e ngaahi fakamatala…",
-    "error": "Na'e ikai lava 'o 'utu'utu mai 'a e ngaahi fakamatala. Kataki 'o toe feinga.",
-    "submitError": "Na'e ikai lava 'o tuku 'a ho'o fakamatala. Kataki 'o toe feinga.",
-    "empty": "Te'eki ha fakamatala. Ko koe 'a e 'uluaki!"
+    "pendingModeration": "Mālō! 'E hā ho'o lau hili 'a e sivi.",
+    "loading": "'Oku 'utu'utu mai 'a e ngaahi lau…",
+    "error": "Na'e ikai lava 'o 'utu'utu mai 'a e ngaahi lau. Kataki 'o toe feinga.",
+    "submitError": "Na'e ikai lava 'o tuku 'a ho'o lau. Kataki 'o toe feinga.",
+    "empty": "Te'eki ha lau. Ko koe 'a e 'uluaki!"
   },
   "admin": {
     "login": "Hū ki Loto Pule",
@@ -86,7 +86,7 @@
     "password": "Lea Fakapulipuli",
     "signIn": "Hū ki Loto",
     "signOut": "Hū ki Tu'a",
-    "dashboard": "Pea",
+    "dashboard": "Dashboard",
     "appointments": "Ngaahi Fakapapau",
     "moderation": "Sivi Fakamatala",
     "barbersManagement": "Kau Tele 'Ulu",
@@ -138,12 +138,12 @@
     "required": "Fiema'u 'a e konga ni.",
     "invalidPhone": "Fakahū ha telefoni ngofua.",
     "pastDate": "Fili ha 'aho 'oku te'eki hoko mai.",
-    "selectRating": "Fili ha fakamamafa."
+    "selectRating": "Fili ha Rating."
   },
   "footer": {
     "tagline": "Vehikité — tele mata'ina, mei Tongatapu.",
-    "rights": "Tapuhi 'a e ngaahi totonu kotoa.",
-    "linksHeading": "Ngaahi Lo'au Vave",
+    "rights": "Ko e Totonu Kotoa 'oku Ma'u.",
+    "linksHeading": "Ngaahi Link Vave",
     "contactHeading": "'A'ahi Mai",
     "address": "Halaloto, Tongatapu",
     "phone": "863-3457",
