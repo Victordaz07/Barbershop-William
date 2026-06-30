@@ -1,18 +1,18 @@
 {
   "nav": {
     "home": "'Api",
-    "services": "Ngaahi Sēvesi",
-    "barbers": "Kau Tele 'Ulu",
-    "reviews": "Ngaahi Lau",
-    "bookNow": "Fakapapau Ni"
+    "services": "Fiema'u",
+    "barbers": "Kau Ngāue",
+    "reviews": "Vakai",
+    "bookNow": "Puka Mai"
   },
   "hero": {
     "kicker": "Tongatapu · Ngāue Fakafāmili",
-    "headline1": "Tele Mata'ina. Mālie 'Aupito.",
-    "headline2": "Loto Mālohi Ma'u Pe.",
+    "headline1": "Ko Ho Talavou mo Ho Fiema'u.",
+    "headline2": "'Oku Mau Tokanga ki Ai.",
     "subtitle": "Fale tele 'ulu fakafāmili 'i Tongatapu, 'oku 'omai 'a e tele mata'ina mo e talitali lelei mo'oni.",
-    "cta": "Fakapapau Ho'o Taimi",
-    "ctaSecondary": "Vakai ki Sēvesi",
+    "cta": "Puka Mai Leva.",
+    "ctaSecondary": "Vakaii 'Emau Sēvesi.",
     "badge1": "Lea Pilitania mo Tonga",
     "badge2": "Hu Mai Pe",
     "badge3": "Kau Tele 'Ulu Lelei"
@@ -20,17 +20,17 @@
   "features": {
     "heading": "Ko e Lelei 'o Vehikité",
     "f1Title": "Sēvesi Lea ua",
-    "f1Desc": "'Oku mau lea fakapilitania mo fakatonga, ke ongo'i 'a e kasitomā kotoa kuo nau 'i 'api.",
+    "f1Desc": "'Oku mau fakahoko fatongia atu 'i he lea faka-Pilitānia mo e faka-Tonga.",
     "f2Title": "Fakapapau Faingofua Online",
-    "f2Desc": "Fili ho'o tele 'ulu, sēvesi, mo taimi 'i ha miniti si'i.",
+    "f2Desc": "'Oku faka'atā mo faingofua pē 'emau fakahoko fatongia.",
     "f3Title": "Hu Mai Pe",
-    "f3Desc": "'Ikai ha fakapapau? 'Ikai ha palopalema — hū mai pea te mau tokoni'i koe.",
+    "f3Desc": "Talitali lelei pē ha fa'ahinga taha.",
     "f4Title": "Kau Tele 'Ulu Lelei",
-    "f4Desc": "Nima poto, laine mata'ina, taimi kotoa 'oku ke heka ai he sea."
+    "f4Desc": "Ko 'emau kau tangata fai fatongia."
   },
   "services": {
     "kicker": "'Emau Lisi",
-    "heading": "'Emau Ngaahi Sēvesi",
+    "heading": "Ko 'Emau Ngaahi Sēvesi.",
     "subheading": "Fili ha sēvesi 'i ho'o fakapapau taimi.",
     "minutes": "miniti",
     "loading": "'Oku 'utu'utu mai…",
@@ -41,13 +41,13 @@
     "kicker": "'A e Kulupu",
     "heading": "'Ilo'i 'Emau Kau Tele 'Ulu",
     "subheading": "Fakapapau mo ho'o tele 'ulu sai'ia, pe tuku mai kiate kimautolu ke fili.",
-    "bookWith": "Fakapapau mo {{name}}",
+    "bookWith": "Puka Mai Leva kia {{name}}",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi fakamatala kau tele 'ulu.",
     "error": "Na'e ikai lava 'o 'utu'utu mai. Kataki 'o toe feinga."
   },
   "booking": {
-    "heading": "Fakapapau ho'o Taimi",
+    "heading": "Puka Mai Leva ho 'Aho.",
     "name": "Hingoa",
     "phone": "Telefoni",
     "service": "Sēvesi",
