@@ -26,7 +26,16 @@ jobs:
       - name: Deploy to Firebase
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/gcp-key.json
-        run: npx firebase-tools deploy --only hosting,firestore:rules --project barbershop-william --non-interactive
+        run: |
+          set +e
+          out=$(npx firebase-tools deploy --only hosting,firestore:rules --project barbershop-william --non-interactive 2>&1)
+          code=$?
+          echo "$out"
+          if [ $code -ne 0 ] && echo "$out" | grep -q "is the current active version"; then
+            echo "::notice::Live channel already serves this exact content; treating release as success."
+            exit 0
+          fi
+          exit $code
 
       - name: Clean up service account key
         if: always()
