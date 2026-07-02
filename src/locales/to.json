@@ -10,7 +10,7 @@
     "kicker": "Tongatapu · Ngāue Fakafāmili",
     "headline1": "Ko Ho Talavou mo Ho Fiema'u.",
     "headline2": "'Oku Mau Tokanga ki Ai.",
-    "subtitle": "Fale tele 'ulu fakafāmili 'i Tongatapu, 'oku 'omai 'a e tele mata'ina mo e talitali lelei mo'oni.",
+    "subtitle": "Ki he lelei taha. Temau talitali lelei kimoutolu mo hao fa'ahinga fiema'u pē ki ho 'ulu.",
     "cta": "Puka Mai Leva.",
     "ctaSecondary": "Vakaii 'Emau Sēvesi.",
     "badge1": "Lea Pilitania mo Tonga",
@@ -26,12 +26,12 @@
     "f3Title": "Hu Mai Pe",
     "f3Desc": "Talitali lelei pē ha fa'ahinga taha.",
     "f4Title": "Kau Tele 'Ulu Lelei",
-    "f4Desc": "Ko 'emau kau tangata fai fatongia."
+    "f4Desc": "Ko 'emau kau sēvaniti kosi 'ulu lelei taha."
   },
   "services": {
     "kicker": "'Emau Lisi",
     "heading": "Ko 'Emau Ngaahi Sēvesi.",
-    "subheading": "Fili ha sēvesi 'i ho'o fakapapau taimi.",
+    "subheading": "Ko e hā ho sitaila, pea ke puka mai leva.",
     "minutes": "miniti",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi sēvesi.",
@@ -40,7 +40,7 @@
   "barbers": {
     "kicker": "'A e Kulupu",
     "heading": "'Ilo'i 'Emau Kau Tele 'Ulu",
-    "subheading": "Fakapapau mo ho'o tele 'ulu sai'ia, pe tuku mai kiate kimautolu ke fili.",
+    "subheading": "Puka leva ki ha taha 'emau kau ngāue.",
     "bookWith": "Puka Mai Leva kia {{name}}",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi fakamatala kau tele 'ulu.",
@@ -51,7 +51,7 @@
     "name": "Hingoa",
     "phone": "Telefoni",
     "service": "Sēvesi",
-    "barber": "Tele 'Ulu",
+    "barber": "Kau Ngāue",
     "anyBarber": "Ha taha 'oku 'ataa",
     "date": "'Aho",
     "time": "Taimi",
@@ -59,7 +59,7 @@
     "submitting": "'Oku fakapapau…",
     "confirmed": "Mālō! Kuo ma'u ho'o kole fakapapau taimi.",
     "selectService": "Fili ha sēvesi",
-    "selectBarber": "Fili ha tele 'ulu",
+    "selectBarber": "Fili ha kau ngāue",
     "slotTaken": "Kuo Fakapapau",
     "error": "Na'e ikai lava 'o tuku ho'o fakapapau. Kataki 'o toe feinga."
   },
@@ -141,7 +141,7 @@
     "selectRating": "Fili ha Rating."
   },
   "footer": {
-    "tagline": "Vehikité — tele mata'ina, mei Tongatapu.",
+    "tagline": "Vehikité — Ki he lelei taha, mei Tongatapu.",
     "rights": "Ko e Totonu Kotoa 'oku Ma'u.",
     "linksHeading": "Ngaahi Link Vave",
     "contactHeading": "'A'ahi Mai",
