@@ -33,6 +33,7 @@
     "heading": "Our Services",
     "subheading": "Pick a service when you book your appointment.",
     "minutes": "min",
+    "duration": "{{n}} min",
     "loading": "Loading services…",
     "empty": "Services coming soon.",
     "error": "Couldn't load services. Please try again."

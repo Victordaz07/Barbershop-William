@@ -80,7 +80,7 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
           <span className="text-3xl font-bold text-coral">${service.price}</span>
           <span className="flex items-center gap-1.5 rounded-full bg-bg2 px-3 py-1 text-xs font-semibold text-muted">
             <ClockIcon className="h-3.5 w-3.5" />
-            {service.durationMinutes} {t('services.minutes')}
+            {t('services.duration', { n: service.durationMinutes })}
           </span>
         </div>
       </div>

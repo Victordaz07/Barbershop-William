@@ -21,7 +21,7 @@
     "heading": "Ko e Lelei 'o Vehikité",
     "f1Title": "Sēvesi Lea Faka-Fonua 'e ua",
     "f1Desc": "'Oku mau fakahoko fatongia atu 'i he lea faka-Pilitānia mo e faka-Tonga.",
-    "f2Title": "Fakapapau Faingofua Online",
+    "f2Title": "Faingofua pē Puka Online",
     "f2Desc": "'Oku faka'atā mo faingofua pē 'emau fakahoko fatongia.",
     "f3Title": "Hu Mai Pe",
     "f3Desc": "Talitali lelei pē ha fa'ahinga taha.",
@@ -33,6 +33,7 @@
     "heading": "Ko 'Emau Ngaahi Sēvesi.",
     "subheading": "Ko e hā ho sitaila, pea ke puka mai leva.",
     "minutes": "miniti",
+    "duration": "miniti 'e {{n}}",
     "loading": "'Oku 'utu'utu mai…",
     "empty": "'E hoko mai ha ngaahi sēvesi.",
     "error": "Na'e ikai lava 'o 'utu'utu mai. Kataki 'o toe feinga."
